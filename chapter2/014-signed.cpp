@@ -14,14 +14,14 @@ int main(void)
   printf("x2 max: %d %x\n", x2, x2);        // x2 max: 2147483647 7fffffff
   printf("x3 min: %d %x\n", x3, x3);        // x3 min: -2147483648 80000000
 
-  // 符号無しint型
-  unsigned int y1 = 10;
-  unsigned int y2 = UINT_MAX;
-  unsigned int y3 = 0; // UINT_MIN ;
+  // 符号付きint型を明示的に指定する
+  signed int y1 = 10;
+  signed int y2 = INT_MAX;
+  signed int y3 = INT_MIN;
 
   printf("y1: %d\n", y1);            // y1: 10
-  printf("y2 max: %d %x\n", y2, y2); // y2 max: 4294967295 ffffffff
-  printf("y3 min: %d %x\n", y3, y3); // y3 min: 0 0
+  printf("y2 max: %d %x\n", y2, y2); // y2 max: 2147483647 7ffffff
+  printf("y3 min: %d %x\n", y3, y3); // y3 min: -2147483648 80000000
 
   return 0;
 }
